@@ -13,6 +13,8 @@
 		185CB20323C78CE6009F7571 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185CB20123C78CE6009F7571 /* Main.storyboard */; };
 		185CB20523C78CE8009F7571 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185CB20423C78CE8009F7571 /* Assets.xcassets */; };
 		18B5876025129C0200E19346 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 18B5875F25129C0200E19346 /* Alamofire */; };
+		791E27C22A3AFB6B00E8B40A /* GitNetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791E27C12A3AFB6B00E8B40A /* GitNetworkLogger.swift */; };
+		791E27C62A3C152100E8B40A /* GitRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791E27C52A3C152100E8B40A /* GitRequestInterceptor.swift */; };
 		B7015DAC249BC3AE00D8917B /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7015DAB249BC3AE00D8917B /* RepositoriesViewController.swift */; };
 		B7442C2224BB960300BF8E35 /* GitRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7442C2124BB960300BF8E35 /* GitRouter.swift */; };
 		B7442C2624BB9A3500BF8E35 /* GitNetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7442C2524BB9A3500BF8E35 /* GitNetworkReachability.swift */; };
@@ -33,11 +35,13 @@
 /* Begin PBXFileReference section */
 		180DC61423C78D9800486B1A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		185CB1F823C78CE6009F7571 /* GitOnFire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitOnFire.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		185CB1FB23C78CE6009F7571 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		185CB1FB23C78CE6009F7571 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 4; };
 		185CB1FD23C78CE6009F7571 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		185CB20223C78CE6009F7571 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		185CB20423C78CE8009F7571 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		185CB20923C78CE8009F7571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		791E27C12A3AFB6B00E8B40A /* GitNetworkLogger.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = GitNetworkLogger.swift; sourceTree = "<group>"; tabWidth = 4; };
+		791E27C52A3C152100E8B40A /* GitRequestInterceptor.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = GitRequestInterceptor.swift; sourceTree = "<group>"; tabWidth = 4; };
 		B7015DAB249BC3AE00D8917B /* RepositoriesViewController.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
 		B7442C2124BB960300BF8E35 /* GitRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = GitRouter.swift; sourceTree = "<group>"; tabWidth = 4; };
 		B7442C2524BB9A3500BF8E35 /* GitNetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = GitNetworkReachability.swift; sourceTree = "<group>"; tabWidth = 4; };
@@ -119,6 +123,8 @@
 				B7AF95F8249D568700D69B4A /* GitAPIManager.swift */,
 				B7442C2124BB960300BF8E35 /* GitRouter.swift */,
 				B7442C2524BB9A3500BF8E35 /* GitNetworkReachability.swift */,
+				791E27C12A3AFB6B00E8B40A /* GitNetworkLogger.swift */,
+				791E27C52A3C152100E8B40A /* GitRequestInterceptor.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -263,11 +269,13 @@
 				B7F6C090249D84C7005B4A08 /* Commit.swift in Sources */,
 				B7442C2624BB9A3500BF8E35 /* GitNetworkReachability.swift in Sources */,
 				185CB1FE23C78CE6009F7571 /* SceneDelegate.swift in Sources */,
+				791E27C22A3AFB6B00E8B40A /* GitNetworkLogger.swift in Sources */,
 				B7F6C099249E90D1005B4A08 /* GitHubAccessToken.swift in Sources */,
 				B7AF95F9249D568700D69B4A /* GitAPIManager.swift in Sources */,
 				B7F6C094249E85DF005B4A08 /* LoginViewController.swift in Sources */,
 				B7F6C08C249D7DB5005B4A08 /* RepositoryCommitsViewController.swift in Sources */,
 				B7F6C0A0249EBA23005B4A08 /* SecureStore.swift in Sources */,
+				791E27C62A3C152100E8B40A /* GitRequestInterceptor.swift in Sources */,
 				B7442C2224BB960300BF8E35 /* GitRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

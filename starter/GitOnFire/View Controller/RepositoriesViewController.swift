@@ -19,7 +19,6 @@ class RepositoriesViewController: UITableViewController {
         searchBar.delegate = self
         loadingIndicator.center = view.center
         view.addSubview(loadingIndicator)
-        loginButton.isHidden = true
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -47,7 +46,12 @@ class RepositoriesViewController: UITableViewController {
     }
 
     func fetchAndDisplayUserRepositories() {
-        //TODO: Add more here..
+        loadingIndicator.startAnimating()
+        GitAPIManager.shared.fetchUserRepositories { [self] repositories in
+            self.repositories = repositories
+            loadingIndicator.stopAnimating()
+            tableView.reloadData()
+        }
     }
 
     func logout() {

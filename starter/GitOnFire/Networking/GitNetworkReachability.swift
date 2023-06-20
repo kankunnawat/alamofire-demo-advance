@@ -16,4 +16,20 @@ class GitNetworkReachability {
         let rootViewController = UIApplication.shared.windows.first?.rootViewController
         rootViewController?.dismiss(animated: true, completion: nil)
     }
+
+    let reachabilityManager = NetworkReachabilityManager(host: "www.google.com")
+    func startNetworkMonitoring() {
+        reachabilityManager?.startListening { status in
+            switch status {
+            case .notReachable:
+                self.showOfflineAlert()
+            case .reachable(.cellular):
+                self.dismissOfflineAlert()
+            case .reachable(.ethernetOrWiFi):
+                self.dismissOfflineAlert()
+            case .unknown:
+                print("Unknown network state")
+            }
+        }
+    }
 }
